@@ -1,6 +1,6 @@
 # 从 0 开始的基于 Dify 的智能体开发教程站点
 
-这是一个使用 [Next.js](https://nextjs.org/) 与 [Nextra](https://nextra.site/) 构建的多语言（中英）教程与博客站点，旨在帮助开发者从零开始打造基于 Dify 的智能体项目。
+这是一个使用 [Next.js](https://nextjs.org/) 与 [Nextra](https://nextra.site/) 构建的多语言（中英日）教程与博客站点，旨在帮助开发者从零开始打造基于 Dify 的智能体项目。
 
 ## 开发脚本
 
@@ -8,7 +8,7 @@
 pnpm install # 或 npm install / yarn install
 npm run dev   # 启动开发服务器
 npm run build # 生产构建
-npm run start # 启动生产服务器
+npm run start # 启动生产服务器（会在首次启动前自动构建）
 npm run lint  # 代码检查
 ```
 
@@ -22,7 +22,7 @@ npm run lint  # 代码检查
 
 ## 多语言
 
-站点默认语言为英语，支持中文，您可以在右上角切换语言。所有主要页面均提供 `en` 与 `zh` 两份内容，可按需扩展。
+站点默认语言为英语，支持简体中文与日语，您可以在右上角切换语言。所有主要页面均提供 `en`、`zh` 与 `ja` 三份内容，可按需扩展。
 
 ## 许可证
 

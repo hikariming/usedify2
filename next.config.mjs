@@ -8,10 +8,6 @@ const withNextra = nextra({
 });
 
 const config = withNextra({
-  i18n: {
-    locales: ['en', 'zh', 'ja'],
-    defaultLocale: 'en'
-  },
   trailingSlash: true,
   reactStrictMode: true
 });
