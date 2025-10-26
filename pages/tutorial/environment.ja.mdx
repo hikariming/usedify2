@@ -1,0 +1,42 @@
+---
+title: "ツールキットをセットアップする"
+---
+
+このモジュールでは、Dify 駆動のエージェントに信頼できる開発環境を整えます。
+
+## 前提ソフトウェアをインストール
+
+```bash
+# 1. 基本ツール
+brew install node pnpm python@3.10 redis
+
+# 2. Dify CLI
+pip install dify-cli
+
+# 3. 品質ゲート
+pnpm dlx husky-init && pnpm install
+```
+
+> **ヒント:** 複数のマイクロサービスでエージェントを補強する場合、ワークスペース管理には PNPM を推奨します。
+
+## 環境変数を設定
+
+エージェントのリポジトリに `.env.local` を作成し、次を記述します。
+
+```ini
+DIFY_API_BASE=https://api.dify.ai
+DIFY_API_KEY=sk-...
+OBSERVABILITY_ENDPOINT=https://otel.yourdomain.dev/v1/traces
+```
+
+ステージングと本番で鍵を分け、プロセスマネージャー（Docker Compose、Fly、Vercel など）で読み込みましょう。
+
+## 接続性を検証
+
+認証情報が正しいか簡単なスモークテストを実行します。
+
+```bash
+npx tsx scripts/ping-dify.ts
+```
+
+スクリプトは `200` レスポンスとワークスペースのメタデータを返すはずです。`401` が出た場合は Dify コンソールから API キーを再発行してください。

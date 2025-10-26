@@ -1,0 +1,114 @@
+---
+title: "ゼロから学ぶ Dify エージェント開発"
+description: "Dify を使ったエージェント開発をゼロからプロダクションまで導く多言語ハンドブック。"
+---
+
+<div className="hero">
+  <div className="hero__badge">エージェント開発を始めよう</div>
+  <h1>Dify でゼロからプロダクションへ</h1>
+  <p>
+    Dify を活用したインテリジェントエージェントをどのように計画し、構築し、評価し、出荷するのかを学びます。
+    実践的なチュートリアル、詳説記事、現場のチーム向けテンプレートで一歩ずつ進みましょう。
+  </p>
+  <div className="hero__cta">
+    <a href="/tutorial/overview" className="primary">チュートリアルを始める</a>
+    <a href="/blog" className="ghost">最新の記事を読む</a>
+  </div>
+</div>
+
+## このガイドの特長
+
+- **段階的なカリキュラム** – 環境構築から本番運用まで、確信を持って進められるよう設計されています。
+- **すぐ使えるコード** – Dify エージェント向けのスニペット、アーキテクチャ図、評価レシピが揃っています。
+- **チーム対応** – ワークフロー、オブザーバビリティ、コラボレーション機能の組み込み方を解説します。
+
+## クイックナビゲーション
+
+```yaml
+start-here: /tutorial/overview
+agent-lifecycle: /tutorial/lifecycle
+prompt-design: /resources/prompt-cookbook
+observability: /resources/observability-checklist
+```
+
+<Callout type="info">
+ローカライズされた体験が必要ですか？ ナビゲーションバーの言語切り替えから英語・簡体字中国語・日本語を選べます。
+</Callout>
+
+<style jsx>{`
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 4rem 3rem;
+  background: radial-gradient(circle at top left, #3b82f6, rgba(37, 99, 235, 0.2));
+  border-radius: 1.5rem;
+  color: white;
+  text-align: left;
+  box-shadow: 0 40px 80px rgba(37, 99, 235, 0.25);
+  overflow: hidden;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/cover.svg') no-repeat right bottom;
+  background-size: min(55%, 320px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+.hero h1 {
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  max-width: 18ch;
+}
+.hero p {
+  max-width: 60ch;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+.hero__badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hero__cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.hero__cta .primary {
+  background: white;
+  color: #1d4ed8;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.25);
+}
+.hero__cta .primary:hover {
+  transform: translateY(-2px);
+}
+.hero__cta .ghost {
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.hero__cta .ghost:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.75rem;
+  }
+}
+`}</style>

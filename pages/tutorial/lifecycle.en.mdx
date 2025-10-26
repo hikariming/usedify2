@@ -1,0 +1,33 @@
+---
+title: "Design the agent lifecycle"
+---
+
+A successful Dify agent balances experimentation with reliability. Use this lifecycle to align your team.
+
+## 1. Discover
+
+- Interview stakeholders to map success metrics.
+- Capture user journeys and context windows in a shared Miro board.
+- Draft a north-star use case and a "first useful version" milestone.
+
+## 2. Prototype
+
+- Spin up a sandbox dataset in Dify for synthetic conversations.
+- Implement the agent in a feature flag (e.g. LaunchDarkly) for safe rollout.
+- Track prompt changes in version control via `.prompt` files.
+
+## 3. Evaluate
+
+- Automate regression checks with Dify evaluation jobs and CI pipelines.
+- Include adversarial prompts and tool failure scenarios.
+- Visualize drift in a dashboard (Metabase, Grafana) to trigger alerts.
+
+## 4. Launch & Learn
+
+- Promote the agent to production with canary routing.
+- Collect structured feedback directly from the Dify conversation history.
+- Schedule weekly reviews to decide iteration priorities.
+
+<Callout>
+The lifecycle should loop. Each launch informs the next discovery sprint.
+</Callout>

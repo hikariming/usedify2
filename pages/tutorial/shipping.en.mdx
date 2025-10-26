@@ -1,0 +1,27 @@
+---
+title: "Ship with confidence"
+---
+
+The final step focuses on production readiness.
+
+## Observability checklist
+
+- [ ] Structured logging with trace IDs propagated to Dify webhooks.
+- [ ] Metrics export (latency, cost, satisfaction) to Prometheus or OpenTelemetry.
+- [ ] Real-time alerting in Slack/Teams for elevated error ratios.
+
+## Security & compliance
+
+1. Rotate Dify API keys every 30 days.
+2. Limit tool permissions with allow lists and scoped credentials.
+3. Store transcripts with encryption at rest and automatic PII scrubbing.
+
+## Launch playbook
+
+| Phase | Owner | Actions |
+| ----- | ----- | ------- |
+| Dry run | Tech lead | Replay real conversations in staging, validate responses |
+| Canary | SRE | Release to 5% traffic, monitor dashboards |
+| General availability | Product | Announce to users, monitor feedback loop |
+
+Document every incident and feed learnings back into the lifecycle to keep improving quality.

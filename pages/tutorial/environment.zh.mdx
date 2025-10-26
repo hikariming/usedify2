@@ -1,0 +1,42 @@
+---
+title: "搭建开发工具链"
+---
+
+本模块帮助你建立稳定可靠的 Dify 智能体开发环境。
+
+## 安装前置工具
+
+```bash
+# 1. 基础工具
+brew install node pnpm python@3.10 redis
+
+# 2. Dify CLI
+pip install dify-cli
+
+# 3. 质量保障
+pnpm dlx husky-init && pnpm install
+```
+
+> **提示：** 推荐使用 PNPM 管理多项目依赖，尤其是在需要为智能体扩展多个微服务时。
+
+## 配置环境变量
+
+在项目根目录创建 `.env.local` 文件：
+
+```ini
+DIFY_API_BASE=https://api.dify.ai
+DIFY_API_KEY=sk-...
+OBSERVABILITY_ENDPOINT=https://otel.yourdomain.dev/v1/traces
+```
+
+建议为测试与生产环境分别生成 API Key，并在部署时通过进程管理器（如 Docker Compose、Fly、Vercel）加载。
+
+## 验证连通性
+
+执行快速连通性测试，确保凭证有效：
+
+```bash
+npx tsx scripts/ping-dify.ts
+```
+
+若返回 `200` 且包含工作区信息，则代表连接成功；若为 `401`，请在 Dify 控制台重新生成密钥。

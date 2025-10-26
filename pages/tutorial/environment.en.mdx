@@ -1,0 +1,42 @@
+---
+title: "Set up your toolkit"
+---
+
+This module ensures a reliable development environment for Dify-powered agents.
+
+## Install prerequisites
+
+```bash
+# 1. Core tooling
+brew install node pnpm python@3.10 redis
+
+# 2. Dify CLI
+pip install dify-cli
+
+# 3. Quality gates
+pnpm dlx husky-init && pnpm install
+```
+
+> **Tip:** Prefer PNPM for workspace management, especially when you scaffold multiple microservices to augment your agent.
+
+## Configure environment variables
+
+Create a `.env.local` file in your agent repo with:
+
+```ini
+DIFY_API_BASE=https://api.dify.ai
+DIFY_API_KEY=sk-...
+OBSERVABILITY_ENDPOINT=https://otel.yourdomain.dev/v1/traces
+```
+
+Use separate keys for staging and production, then load them with your process manager (e.g. Docker Compose, Fly, Vercel).
+
+## Validate connectivity
+
+Run the quick smoke test to ensure the credentials are correct:
+
+```bash
+npx tsx scripts/ping-dify.ts
+```
+
+The script should return a `200` response along with your workspace metadata. If you see `401`, rotate the API key from the Dify console.

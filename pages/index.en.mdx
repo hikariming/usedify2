@@ -1,0 +1,114 @@
+---
+title: "Build Dify Agents from Scratch"
+description: "A multilingual handbook and blog for mastering Dify-based agent development from zero to production."
+---
+
+<div className="hero">
+  <div className="hero__badge">Launch your agent journey</div>
+  <h1>From Zero to Production with Dify</h1>
+  <p>
+    Learn how to plan, build, evaluate, and ship intelligent agents powered by Dify. Follow the
+    opinionated tutorials, deep-dive articles, and project templates tailored for real-world teams.
+  </p>
+  <div className="hero__cta">
+    <a href="/tutorial/overview" className="primary">Start the tutorial</a>
+    <a href="/blog" className="ghost">Read the latest insights</a>
+  </div>
+</div>
+
+## Why this guide?
+
+- **Step-by-step curriculum** – Move from environment setup to production-grade deployment with confidence.
+- **Actionable code** – Copy-ready snippets, architecture diagrams, and evaluation recipes for Dify agents.
+- **Team ready** – Learn how to integrate workflows, observability, and collaboration features for your org.
+
+## Quick navigation
+
+```yaml
+start-here: /tutorial/overview
+agent-lifecycle: /tutorial/lifecycle
+prompt-design: /resources/prompt-cookbook
+observability: /resources/observability-checklist
+```
+
+<Callout type="info">
+Need a localized experience? Use the language switcher in the navbar to switch to Simplified Chinese or Japanese.
+</Callout>
+
+<style jsx>{`
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 4rem 3rem;
+  background: radial-gradient(circle at top left, #3b82f6, rgba(37, 99, 235, 0.2));
+  border-radius: 1.5rem;
+  color: white;
+  text-align: left;
+  box-shadow: 0 40px 80px rgba(37, 99, 235, 0.25);
+  overflow: hidden;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/cover.svg') no-repeat right bottom;
+  background-size: min(55%, 320px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+.hero h1 {
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  max-width: 18ch;
+}
+.hero p {
+  max-width: 60ch;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+.hero__badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hero__cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.hero__cta .primary {
+  background: white;
+  color: #1d4ed8;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.25);
+}
+.hero__cta .primary:hover {
+  transform: translateY(-2px);
+}
+.hero__cta .ghost {
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.hero__cta .ghost:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.75rem;
+  }
+}
+`}</style>
