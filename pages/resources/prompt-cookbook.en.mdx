@@ -1,0 +1,33 @@
+---
+title: "Prompt cookbook"
+description: "Reusable prompt patterns tailored for Dify agents."
+---
+
+Use these patterns as starting points. Tune them with your own domain data.
+
+## Guarded research agent
+
+```yaml
+role: research-analyst
+style: analytical, cite-sources
+workflow:
+  - gather context via web-search
+  - synthesize findings into bullet summary
+  - enumerate references in markdown table
+constraints:
+  - refuse to speculate without sources
+  - inject follow-up questions when confidence < 0.6
+```
+
+## Customer support triage
+
+```yaml
+intent-detection: classification(prompt="Ticket intent", labels=["billing", "technical", "other"])
+reply-template: |
+  Hello {{name}},
+  Thanks for reaching out about {{intent}}.
+  {{solution}}
+  If the issue persists, reply with "Handoff" for a human specialist.
+```
+
+Remember to version prompts by committing changes in Git and tagging releases.

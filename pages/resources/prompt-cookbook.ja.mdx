@@ -1,0 +1,33 @@
+---
+title: "プロンプトクックブック"
+description: "Dify エージェント向けに最適化された再利用可能なプロンプトパターン。"
+---
+
+これらのパターンを出発点として活用し、自分のドメインデータでチューニングしてください。
+
+## ガード付きリサーチエージェント
+
+```yaml
+role: research-analyst
+style: analytical, cite-sources
+workflow:
+  - gather context via web-search
+  - synthesize findings into bullet summary
+  - enumerate references in markdown table
+constraints:
+  - refuse to speculate without sources
+  - inject follow-up questions when confidence < 0.6
+```
+
+## カスタマーサポートの一次対応
+
+```yaml
+intent-detection: classification(prompt="Ticket intent", labels=["billing", "technical", "other"])
+reply-template: |
+  Hello {{name}},
+  Thanks for reaching out about {{intent}}.
+  {{solution}}
+  If the issue persists, reply with "Handoff" for a human specialist.
+```
+
+プロンプトは Git で変更をコミットし、リリースにタグを付けてバージョン管理することを忘れないでください。
