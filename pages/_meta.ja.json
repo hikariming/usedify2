@@ -1,0 +1,10 @@
+{
+  "index": {
+    "title": "ホーム",
+    "type": "page",
+    "display": "hidden"
+  },
+  "tutorial": "チュートリアル",
+  "blog": "ブログ",
+  "resources": "リソース"
+}

@@ -1,0 +1,10 @@
+{
+  "index": {
+    "title": "首页",
+    "type": "page",
+    "display": "hidden"
+  },
+  "tutorial": "教程",
+  "blog": "博客",
+  "resources": "资源"
+}

@@ -1,0 +1,10 @@
+{
+  "index": {
+    "title": "Home",
+    "type": "page",
+    "display": "hidden"
+  },
+  "tutorial": "Tutorial",
+  "blog": "Blog",
+  "resources": "Resources"
+}

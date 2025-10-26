@@ -1,0 +1,24 @@
+---
+title: "Observability checklist"
+description: "A production checklist for monitoring Dify agents."
+---
+
+Track these items before every launch.
+
+### Telemetry
+
+- [ ] Collect request/response bodies with redaction rules.
+- [ ] Emit span events for tool invocations (success + failure).
+- [ ] Store evaluation results alongside production metrics for correlation.
+
+### Dashboards
+
+- Latency percentiles (p50, p95, p99).
+- Satisfaction scores vs. baseline.
+- Cost per conversation compared with your target margin.
+
+### Incident response
+
+1. Document runbooks for top 5 failure modes.
+2. Define on-call rotation with escalation policy.
+3. Drill quarterly game days that simulate upstream outages.

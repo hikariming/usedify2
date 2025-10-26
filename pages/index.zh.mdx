@@ -1,0 +1,113 @@
+---
+title: "从零开始构建 Dify 智能体"
+description: "面向中文开发者的 Dify 智能体入门、实战与进阶指南，涵盖教程、博客与精选文章。"
+---
+
+<div className="hero">
+  <div className="hero__badge">智能体开发启航</div>
+  <h1>零基础到生产级 Dify 实战</h1>
+  <p>
+    通过循序渐进的教程、深度文章与模板项目，掌握如何规划、搭建、评估并上线 Dify 智能体，帮助团队快速落地。
+  </p>
+  <div className="hero__cta">
+    <a href="/zh/tutorial/overview" className="primary">立即开始教程</a>
+    <a href="/zh/blog" className="ghost">阅读最新洞察</a>
+  </div>
+</div>
+
+## 为什么选择本指南？
+
+- **完整学习路径** —— 从环境准备到上线部署，覆盖智能体开发的每个关键环节。
+- **实操导向** —— 提供可直接复用的代码片段、架构图与评估方法。
+- **团队友好** —— 聚焦协同、可观测性与合规性的最佳实践，助力组织级落地。
+
+## 快速导航
+
+```yaml
+从这里开始: /zh/tutorial/overview
+智能体生命周期: /zh/tutorial/lifecycle
+提示词设计: /zh/resources/prompt-cookbook
+可观测性清单: /zh/resources/observability-checklist
+```
+
+<Callout type="info">
+需要其他语言？使用右上角语言切换按钮即可切换到英文或日文版本。
+</Callout>
+
+<style jsx>{`
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 4rem 3rem;
+  background: radial-gradient(circle at top left, #3b82f6, rgba(37, 99, 235, 0.2));
+  border-radius: 1.5rem;
+  color: white;
+  text-align: left;
+  box-shadow: 0 40px 80px rgba(37, 99, 235, 0.25);
+  overflow: hidden;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/cover.svg') no-repeat right bottom;
+  background-size: min(55%, 320px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+.hero h1 {
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  max-width: 18ch;
+}
+.hero p {
+  max-width: 60ch;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+.hero__badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hero__cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.hero__cta .primary {
+  background: white;
+  color: #1d4ed8;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.25);
+}
+.hero__cta .primary:hover {
+  transform: translateY(-2px);
+}
+.hero__cta .ghost {
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.hero__cta .ghost:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.75rem;
+  }
+}
+`}</style>

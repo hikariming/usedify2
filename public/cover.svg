@@ -1,0 +1,23 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="50%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.2" cy="0.2" r="0.9">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.8)" />
+      <stop offset="100%" stop-color="rgba(59,130,246,0)" />
+    </radialGradient>
+  </defs>
+  <rect width="640" height="360" rx="40" fill="url(#grad)" />
+  <circle cx="120" cy="90" r="140" fill="url(#glow)" />
+  <g fill="white" fill-opacity="0.85">
+    <path d="M120 120c0-44.1838 35.8162-80 80-80s80 35.8162 80 80-35.8162 80-80 80-80-35.8162-80-80zm32 0c0 26.5097 21.4903 48 48 48s48-21.4903 48-48-21.4903-48-48-48-48 21.4903-48 48z" />
+    <path d="M360 60h48c39.7645 0 72 32.2355 72 72s-32.2355 72-72 72h-48c-17.6731 0-32-14.3269-32-32V92c0-17.6731 14.3269-32 32-32zm16 48v48c0 8.8366 7.1634 16 16 16h16c17.6731 0 32-14.3269 32-32s-14.3269-32-32-32h-48z" />
+    <path d="M120 252h400v16H120z" opacity="0.4" />
+  </g>
+  <text x="120" y="310" fill="white" fill-opacity="0.7" font-family="'Inter', 'Segoe UI', sans-serif" font-size="24" font-weight="600">
+    From Zero to Dify Agent
+  </text>
+</svg>
